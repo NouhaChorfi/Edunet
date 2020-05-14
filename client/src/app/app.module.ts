@@ -7,7 +7,6 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatMenuModule} from '@angular/material/menu';
-
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
@@ -30,7 +29,6 @@ import { TeacherLogComponent } from './teacher-log/teacher-log.component';
   declarations: [
     AppComponent,
     NavbarComponent,
-    
     LoginComponent,
     HomeComponent,
     RegisterComponent,
@@ -58,11 +56,13 @@ import { TeacherLogComponent } from './teacher-log/teacher-log.component';
     
     
     
+    
   
   
   
   
   ],
+ 
   providers: [],
   bootstrap: [AppComponent]
 })

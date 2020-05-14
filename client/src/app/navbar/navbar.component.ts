@@ -1,18 +1,20 @@
-import { Component} from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
-export class NavbarComponent  {
-  number =0
+export class NavbarComponent implements OnInit  {
+  isopen : Boolean = false ;
   constructor() {
-    setInterval(()=>{
-      this.number++
-    },1000)
+    
    }
-
- 
+   ngOnInit(): void {
+  }
+  // when we minimise the browser to check elements in it must toggle the button  
+  toggleNavBar(){
+    this.isopen= !this.isopen;
+  }
 
 }

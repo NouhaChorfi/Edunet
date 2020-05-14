@@ -127,5 +127,10 @@
   "defaultProject": "edunet",
   "cli": {
     "analytics": "edc20e24-6be0-4ba3-b6c8-e7bfea6b5dac"
+  },
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "css"
+    }
   }
 }
