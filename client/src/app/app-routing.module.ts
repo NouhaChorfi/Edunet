@@ -6,6 +6,8 @@ import {CoursesComponent} from './courses/courses.component';
 import {TeachersComponent} from './teachers/teachers.component';
 import {LoginComponent} from './login/login.component';
 import {RegisterComponent} from './register/register.component';
+import {FormComponent} from './form/form.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 const routes: Routes = [
@@ -15,6 +17,8 @@ const routes: Routes = [
 {path : 'courses' , component : CoursesComponent},
 {path : 'login' , component : LoginComponent},
 {path : 'register' , component : RegisterComponent},
+{path : 'form' , component : FormComponent},
+{path : 'admin',  component : DashboardComponent }
 
 
 ];
