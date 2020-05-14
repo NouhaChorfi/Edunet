@@ -28,12 +28,12 @@ import { FeatureTeachersComponent } from './feature-teachers/feature-teachers.co
 import { CreateCourseComponent } from './create-course/create-course.component';
 import { StudentLogComponent } from './student-log/student-log.component';
 import { TeacherLogComponent } from './teacher-log/teacher-log.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    
     LoginComponent,
     HomeComponent,
     RegisterComponent,
@@ -50,7 +50,8 @@ import { TeacherLogComponent } from './teacher-log/teacher-log.component';
     FeatureTeachersComponent,
     CreateCourseComponent,
     StudentLogComponent,
-    TeacherLogComponent
+    TeacherLogComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -63,6 +64,7 @@ import { TeacherLogComponent } from './teacher-log/teacher-log.component';
   
   
   ],
+ 
   providers: [],
   bootstrap: [AppComponent]
 })
