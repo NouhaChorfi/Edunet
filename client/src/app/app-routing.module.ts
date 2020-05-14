@@ -11,7 +11,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 const routes: Routes = [
-{path : '', component : HomeComponent},
+{path : '', component : HomeComponent, children : [{path : 'teachers' , component : TeachersComponent},{path : 'courses' , component : CoursesComponent}]},
 {path : 'course' , component : CourseComponent},
 {path : 'teachers' , component : TeachersComponent},
 {path : 'courses' , component : CoursesComponent},

@@ -9,12 +9,8 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-<<<<<<< HEAD
-import {MatMenuModule} from '@angular/material/menu';
-=======
 
 
->>>>>>> 74c18be9e5e81e189655653db38f65ceb0d00b39
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
@@ -62,15 +58,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     AppRoutingModule,
     NgbModule,
     BrowserAnimationsModule,
-<<<<<<< HEAD
-    MatMenuModule,
-    
-    
-    
-    
-=======
     MDBBootstrapModule.forRoot()    
->>>>>>> 74c18be9e5e81e189655653db38f65ceb0d00b39
   
   
   
