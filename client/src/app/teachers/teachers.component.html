@@ -1,1 +1,34 @@
-<p>teachers works!</p>
+<!--Grid row-->
+<div class="row">
+
+  <!--Grid column-->
+  <div class="col-md-4 teacherDiv" *ngFor="let teacher of teachers">
+    <mdb-card>
+      <div class="view rgba-white-slight waves-light" mdbWavesEffect>
+        <!-- Card img -->
+        <mdb-card-img src={{teacher.photo}} alt="Card image cap">
+        </mdb-card-img>
+        <a>
+          <div class="mask"></div>
+        </a>
+      </div>
+      <!--Card content-->
+      <mdb-card-body>
+        <!--Title-->
+        <mdb-card-title>
+          <h4>Card Title</h4>
+        </mdb-card-title>
+
+        <!--Text-->
+        <mdb-card-text> Some quick example text to build on the card title and make up the bulk of the card's
+          content.
+        </mdb-card-text>
+
+        <a href="#" mdbBtn color="primary" mdbWavesEffect>Button</a>
+      </mdb-card-body>
+    </mdb-card>
+    <!-- Card -->
+  </div>
+  <!--Grid column-->
+</div>
+<!--Grid row-->

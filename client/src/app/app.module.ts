@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { HttpClientModule } from '@angular/common/http';
 // Importing Material Design Library
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
@@ -9,7 +10,6 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
 
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
@@ -33,7 +33,7 @@ import { TeacherLogComponent } from './teacher-log/teacher-log.component';
   declarations: [
     AppComponent,
     NavbarComponent,
-    
+
     LoginComponent,
     HomeComponent,
     RegisterComponent,
@@ -50,20 +50,17 @@ import { TeacherLogComponent } from './teacher-log/teacher-log.component';
     FeatureTeachersComponent,
     CreateCourseComponent,
     StudentLogComponent,
-    TeacherLogComponent
+    TeacherLogComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
     BrowserAnimationsModule,
-    MDBBootstrapModule.forRoot()    
-  
-  
-  
-  
+    MDBBootstrapModule.forRoot(),
+    HttpClientModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
