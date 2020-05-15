@@ -12,10 +12,10 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import {TeacherComponent} from './teacher/teacher.component';
 
 const routes: Routes = [
- 
 {path : '', component : HomeComponent},
 {path : 'courses/:id' , component : CourseComponent},
 {path : 'teachers' , component : TeachersComponent},
+{path : 'teachers/:id' , component : TeacherComponent},
 {path : 'courses' , component : CoursesComponent },
 {path : 'login' , component : LoginComponent},
 {path : 'register' , component : RegisterComponent},
