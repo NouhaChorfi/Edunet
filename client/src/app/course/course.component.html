@@ -1,1 +1,9 @@
-<p>course works!</p>
+<p>{{course.course.title}}</p>
+<img src={{course.course.photo}} />
+<p>{{course.course.description}}</p>
+<div *ngFor="let video of videos">
+  <p>{{video.title}}</p>
+
+  <iframe width="420" height="345" [src]="transform(video.url)">
+  </iframe>
+</div>

@@ -9,9 +9,9 @@
           <h4>{{course.title}}</h4>
         </mdb-card-title>
 
-
         <mdb-card-text>{{course.description}}</mdb-card-text>
-        <a href="#" mdbBtn color="primary" mdbWavesEffect>See more </a>
+        <a [routerLink]=[course.id] mdbBtn color="primary" mdbWavesEffect id={{course.id}}>See more </a>
+        <!-- <button (click)="goToCourse('/courses',course.id)">click</button> -->
       </mdb-card-body>
     </mdb-card>
   </div>
