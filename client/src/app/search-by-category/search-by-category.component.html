@@ -1,54 +1,18 @@
-<!--Section: Features v.2-->
-<section class="text-center">
-  <!--Section heading-->
-  <h2 class="h1 py-5 font-weight-bold">Category</h2>
-  <!--Section description-->
-  <p class="px-5 mb-5 pb-3 lead grey-text"></p>
-  <!--Grid row-->
-  <div class="row text-left">
-    <!--Grid column-->
-    <div class="col-md-4 mb-4">
-      <div class="col-1 col-md-2 float-left">
-        <mdb-icon fas icon="bullhorn" size="2x" class="blue-text"></mdb-icon>
-      </div>
-      <div class="col-10 col-md-9 col-lg-10 float-right">
-        <h4 class="font-weight-bold">Marketing</h4>
-        <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores
-          nam,
-          aperiam minima assumenda.</p>
-        <a mdbBtn color="primary" size="sm" class="ml-0 waves-light" mdbWavesEffect routerLink="category/Marketing">Learn more</a>
-      </div>
-    </div>
-    <!--Grid column-->
-    <!--Grid column-->
-    <div class="col-md-4 mb-4">
-      <div class="col-1 col-md-2 float-left">
-        <mdb-icon fas icon="cogs" size="2x" class="pink-text"></mdb-icon>
-      </div>
-      <div class="col-10 col-md-9 col-lg-10 float-right">
-        <h4 class="font-weight-bold">IT</h4>
-        <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores
-          nam,
-          aperiam minima assumenda.</p>
-        <a mdbBtn color="pink" size="sm" class="ml-0 waves-light" mdbWavesEffect routerLink="category/IT">Learn more</a>
-      </div>
-    </div>
-    <!--Grid column-->
-    <!--Grid column-->
-    <div class="col-md-4 mb-4">
-      <div class="col-1 col-md-2 float-left">
-        <mdb-icon fas icon="tachometer-alt" size="2x" class="purple-text"></mdb-icon>
-      </div>
-      <div class="col-10 col-md-9 col-lg-10 float-right">
-        <h4 class="font-weight-bold">Language</h4>
-        <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores
-          nam,
-          aperiam minima assumenda.</p>
-        <a mdbBtn color="secondary" size="sm" class="ml-0 waves-light" mdbWavesEffect routerLink="category/Language">Learn more</a>
-      </div>
-    </div>
-    <!--Grid column-->
+<p>search-by-category works!</p>
+<div class="row">
+  <div *ngFor="let courseByCategory of selectedCategory" class="col-md-4 courseDiv">
+    <mdb-card>
+      <mdb-card-img src="{{courseByCategory.photo}}"></mdb-card-img>
+      <div id='line'></div>
+      <mdb-card-body>
+        <mdb-card-title>
+          <h4>{{courseByCategory.title}}</h4>
+        </mdb-card-title>
+        <mdb-card-text>{{courseByCategory.description}}</mdb-card-text>
+        <a [routerLink]="['/courses/',courseByCategory.id]" color="primary" id={{courseByCategory.id}} mdbBtn
+           mdbWavesEffect>See more
+        </a>
+      </mdb-card-body>
+    </mdb-card>
   </div>
-  <!--Grid row-->
-</section>
-<!--Section: Features v.2-->
+</div>

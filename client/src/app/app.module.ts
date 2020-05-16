@@ -51,9 +51,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     CreateCourseComponent,
     StudentLogComponent,
     TeacherLogComponent,
-    DashboardComponent
+    DashboardComponent,
   ],
-  
+
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -62,7 +62,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     MDBBootstrapModule.forRoot(),
     HttpClientModule,
   ],
- 
+
   providers: [],
   bootstrap: [AppComponent],
 })

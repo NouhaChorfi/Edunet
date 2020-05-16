@@ -1,19 +1,25 @@
-import { Component, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {SearchComponent} from '../search/search.component';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.scss']
+  styleUrls: ['./navbar.component.scss'],
 })
-export class NavbarComponent implements OnInit  {
+export class NavbarComponent implements OnInit {
   val = '';
-  handleSubmit(){}
-   handleInput(event){
-    this.val = event.target.value;
-  }
+
   constructor() {
   }
-   ngOnInit(): void {
+
+  handleSubmit() {
   }
 
+  handleInput(event) {
+    this.val = event.target.value;
+    console.log(this.val)
+  }
+
+  ngOnInit(): void {
+  }
 }

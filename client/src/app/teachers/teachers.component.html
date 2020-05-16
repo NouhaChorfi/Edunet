@@ -1,13 +1,13 @@
-
+<<<<<<< HEAD=======>>>>>>> cf71fb52dbe8dab6c0a0911c34d1dcd99fdac8b1
 <!--Grid row-->
 <div class="row">
 
   <!--Grid column-->
-  <div class="col-md-4 teacherDiv" *ngFor="let teacher of teachers">
+  <div *ngFor="let teacher of teachers" class="col-md-4 teacherDiv">
     <mdb-card>
       <div class="view rgba-white-slight waves-light" mdbWavesEffect>
         <!-- Card img -->
-        <mdb-card-img src={{teacher.photo}} alt="Card image cap">
+        <mdb-card-img alt="Card image cap" src={{teacher.photo}}>
         </mdb-card-img>
         <a>
           <div class="mask"></div>
@@ -24,7 +24,7 @@
         <mdb-card-text> {{teacher.email}}
         </mdb-card-text>
 
-        <a [routerLink]='teacher.id' mdbBtn color="primary" mdbWavesEffect>Profile</a>
+        <a [routerLink]='teacher.id' color="primary" mdbBtn mdbWavesEffect>Profile</a>
       </mdb-card-body>
     </mdb-card>
     <!-- Card -->
@@ -32,4 +32,3 @@
   <!--Grid column-->
 </div>
 <!--Grid row-->
-

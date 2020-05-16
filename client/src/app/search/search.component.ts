@@ -1,5 +1,5 @@
 /* tslint:disable:semicolon whitespace */
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, OnChanges} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import { ActivatedRoute } from '@angular/router';
 
@@ -28,8 +28,7 @@ export class SearchComponent implements OnInit {
 
   ngOnInit(): void {
     const value = this.activatedRoute.snapshot.params.val;
-    console.log(this.activatedRoute.snapshot.params);
+    console.log(value);
     this.search(value);
   }
-
 }
