@@ -1,3 +1,4 @@
+/* tslint:disable:no-trailing-whitespace */
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { CoursesComponent } from '../courses/courses.component';
@@ -36,7 +37,10 @@ export class CourseComponent implements OnInit {
   course = [] as any;
   videos = [] as any;
 
-  enroll(){}  handleSubmit(){}  handleInput(){}
+  enroll(){}
+  handleSubmit(){}
+  handleInput(){}
+
   getCourse(id) {
     return this.http.get<any>(`http://localhost:8080/courses/${id}`);
   }
