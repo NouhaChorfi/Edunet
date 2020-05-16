@@ -22,7 +22,7 @@ const routes: Routes = [
 {path : 'register' , component : RegisterComponent},
 {path : 'form' , component : FormComponent},
 {path : 'admin',  component : DashboardComponent },
-{path: 'search/:value', component: SearchComponent}
+{path: 'search/:val', component: SearchComponent}
 
 ];
 
