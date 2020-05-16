@@ -8,7 +8,7 @@ import { Component, OnInit} from '@angular/core';
 export class NavbarComponent implements OnInit  {
   val = '';
   handleSubmit(){}
-  handleInput(event){
+   handleInput(event){
     this.val = event.target.value;
   }
   constructor() {

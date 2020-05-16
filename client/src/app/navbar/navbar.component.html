@@ -28,12 +28,14 @@
     <!-- Links -->
 
     <!-- Search form -->
-    <form class="form-inline waves-light" mdbWavesEffect>
-      <div class="md-form my-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="Search" (change)="handleInput($event)" >
-        <button routerLink ="search/{{this.val}}" class="btn btn-outline-warning my-2 my-sm-0" type="submit"></button>
-      </div>
-    </form>
+    <links>
+      <form class="form-inline waves-light waves-light ml-auto" mdbWavesEffect>
+        <div class="md-form my-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" (change)="handleInput($event)">
+          <button routerLink ="search/{{this.val}}" mdbBtn color="success" outline="true" size="sm" class="my-0 waves-light" mdbWavesEffect><b>Search</b></button>
+        </div>
+      </form>
+    </links>
     <!-- Dropdown -->
     <ul class="navbar-nav ml-auto nav-flex-icons">
       <li class="nav-item">
