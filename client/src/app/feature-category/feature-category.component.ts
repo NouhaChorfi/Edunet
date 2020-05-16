@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { from } from 'rxjs';
-import { url } from 'inspector';
 let serverUrl = 'http://localhost:8080/category';
 @Component({
   selector: 'app-feature-category',

@@ -53,6 +53,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     TeacherLogComponent,
     DashboardComponent,
   ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,
