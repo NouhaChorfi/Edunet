@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {HttpClient} from '@angular/common/http';
+
+const serverUrl = "http"
 
 @Component({
   selector: 'app-search',
