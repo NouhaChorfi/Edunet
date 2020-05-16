@@ -1,6 +1,6 @@
 const db = require('sequelize');
 
-const sql = new db('edunet', 'root', 'root', {
+const sql = new db('edunet', 'root', 'Nouha', {
   dialect: 'mysql'
 });
 

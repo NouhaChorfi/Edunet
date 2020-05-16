@@ -10,7 +10,8 @@
     <!-- Links -->
     <ul class="navbar-nav mr-auto">
       <li class="nav-item ">
-        <a class="nav-link waves-light" mdbWavesEffect routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]={exact:true}>Home<span class="sr-only">(current)</span></a>
+        <a class="nav-link waves-light" mdbWavesEffect routerLink="/" routerLinkActive="active"
+          [routerLinkActiveOptions]={exact:true}>Home<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link waves-light" mdbWavesEffect routerLink="/teachers" routerLinkActive="active">Teachers</a>
@@ -33,6 +34,7 @@
         <input class="form-control mr-sm-2" type="text" placeholder="Search" (change)="handleInput($event)" >
         <button routerLink ="search/{{this.val}}" class="btn btn-outline-warning my-2 my-sm-0" type="submit"></button>
       </div>
+
     </form>
     <!-- Dropdown -->
     <ul class="navbar-nav ml-auto nav-flex-icons">
@@ -56,4 +58,3 @@
 
 </mdb-navbar>
 <!--/.Navbar-->
-
