@@ -27,24 +27,8 @@ export class CoursesComponent implements OnInit {
     return data;
   }
 
-  getID(id) {
-    return id;
-  }
-
   public goToCourse(url, id) {
     this.router.navigate(['courses', id]);
-
-    // // course/1
-    // var myUrl = `${url}/${id}`;
-    // this.idCourse = id;
-    // this.getID(this.idCourse);
-    // this.router.navigateByUrl(myUrl).then((e) => {
-    //   if (e) {
-    //     console.log('Navigation is successful!');
-    //   } else {
-    //     console.log('Navigation has failed!');
-    //   }
-    // });
   }
   ngOnInit(): void {
     console.log('Called ONINIT');

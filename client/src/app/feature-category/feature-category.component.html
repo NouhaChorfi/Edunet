@@ -1,1 +1,8 @@
-<p>feature-category works!</p>
+<h1>Caterogy</h1>
+
+
+<div class="row">
+  <div *ngFor='let category of categories'>
+    <button class="fas fa-a fa-4x" [routerLink]="['category/',category.name]">{{category.name}}</button>
+  </div>
+</div>
