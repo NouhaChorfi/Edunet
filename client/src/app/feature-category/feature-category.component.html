@@ -1,8 +1,60 @@
 <h1>Caterogy</h1>
 
 
-<div class="row">
-  <div *ngFor='let category of categories'>
-    <button class="fas fa-a fa-4x" [routerLink]="['category/',category.name]">{{category.name}}</button>
+<!--Section: Features v.2-->
+<section class="text-center">
+  <!--Section heading-->
+  <h2 class="h1 py-5 font-weight-bold">Category</h2>
+  <!--Section description-->
+  <p class="px-5 mb-5 pb-3 lead grey-text"></p>
+  <!--Grid row-->
+  <div class="row text-left">
+    <!--Grid column-->
+    <div class="col-md-4 mb-4">
+      <div class="col-1 col-md-2 float-left">
+        <mdb-icon class="blue-text" fas icon="bullhorn" size="2x"></mdb-icon>
+      </div>
+      <div class="col-10 col-md-9 col-lg-10 float-right">
+        <h4 class="font-weight-bold">Marketing</h4>
+        <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores
+          nam,
+          aperiam minima assumenda.</p>
+        <a class="ml-0 waves-light" color="primary" mdbBtn mdbWavesEffect routerLink="category/Marketing" size="sm">Learn
+          more</a>
+      </div>
+    </div>
+    <!--Grid column-->
+    <!--Grid column-->
+    <div class="col-md-4 mb-4">
+      <div class="col-1 col-md-2 float-left">
+        <mdb-icon class="pink-text" fas icon="cogs" size="2x"></mdb-icon>
+      </div>
+      <div class="col-10 col-md-9 col-lg-10 float-right">
+        <h4 class="font-weight-bold">IT</h4>
+        <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores
+          nam,
+          aperiam minima assumenda.</p>
+        <a class="ml-0 waves-light" color="pink" mdbBtn mdbWavesEffect routerLink="category/IT" size="sm">Learn more</a>
+      </div>
+    </div>
+    <!--Grid column-->
+    <!--Grid column-->
+    <div class="col-md-4 mb-4">
+      <div class="col-1 col-md-2 float-left">
+        <mdb-icon class="purple-text" fas icon="tachometer-alt" size="2x"></mdb-icon>
+      </div>
+      <div class="col-10 col-md-9 col-lg-10 float-right">
+        <h4 class="font-weight-bold">Language</h4>
+        <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores
+          nam,
+          aperiam minima assumenda.</p>
+        <a class="ml-0 waves-light" color="secondary" mdbBtn mdbWavesEffect routerLink="category/Language" size="sm">Learn
+          more</a>
+      </div>
+    </div>
+    <!--Grid column-->
   </div>
-</div>
+  <!--Grid row-->
+</section>
+<!--Section: Features v.2-->
+

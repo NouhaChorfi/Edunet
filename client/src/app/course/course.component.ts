@@ -1,8 +1,6 @@
 /* tslint:disable:no-trailing-whitespace */
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { CoursesComponent } from '../courses/courses.component';
-import { from } from 'rxjs';
 import { ActivatedRoute } from '@angular/router';
 
 import { DomSanitizer } from '@angular/platform-browser';
