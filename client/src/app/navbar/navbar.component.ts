@@ -7,12 +7,14 @@ import {SearchComponent} from "../search/search.component"
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit  {
-  
+  val = '';
+  handleSubmit(){}
+  handleInput(event){
+    this.val = event.target.value;
+  }
   constructor() {
-    
-   }
+  }
    ngOnInit(): void {
   }
-  
 
 }

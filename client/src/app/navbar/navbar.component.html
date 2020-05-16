@@ -30,7 +30,8 @@
     <!-- Search form -->
     <form class="form-inline waves-light" mdbWavesEffect>
       <div class="md-form my-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="Search"  >
+        <input class="form-control mr-sm-2" type="text" placeholder="Search" (change)="handleInput($event)" >
+        <button routerLink ="search/{{this.val}}" class="btn btn-outline-warning my-2 my-sm-0" type="submit"></button>
       </div>
     </form>
     <!-- Dropdown -->

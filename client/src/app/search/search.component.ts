@@ -2,9 +2,9 @@
 import { Component, OnInit } from '@angular/core';
 import { filter } from 'rxjs/operators';
 import {HttpClient} from '@angular/common/http';
+import { ActivatedRoute } from '@angular/router';
 
-const serverUrl = (`http://localhost:8080/courses/`)
-
+const serverUrl = `http://localhost:8080/courses`;
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
@@ -12,9 +12,9 @@ const serverUrl = (`http://localhost:8080/courses/`)
 })
 export class SearchComponent implements OnInit {
   // tslint:disable-next-line:ban-types
-  data = <any> [];
-  constructor(private http: HttpClient) { }
-   search(value){
+  data = [] as any;
+  constructor(private http: HttpClient, private activatedRoute: ActivatedRoute,) { }
+  search(value){
     return this.http.get(serverUrl).subscribe(
       (data) =>{
         console.log(data);
@@ -29,7 +29,9 @@ export class SearchComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.search("eng")
+    const value = this.activatedRoute.snapshot.params.val;
+    console.log(this.activatedRoute.snapshot.params);
+    this.search(value);
   }
 
 }
