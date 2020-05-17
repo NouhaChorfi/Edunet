@@ -1,18 +1,21 @@
-import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { ActivatedRoute } from '@angular/router';
-import { from } from 'rxjs';
+import {Component, OnInit} from '@angular/core';
+import {HttpClient} from '@angular/common/http';
+import {ActivatedRoute} from '@angular/router';
+import {from} from 'rxjs';
+
 @Component({
   selector: 'app-search-by-category',
   templateUrl: './search-by-category.component.html',
   styleUrls: ['./search-by-category.component.scss'],
 })
 export class SearchByCategoryComponent implements OnInit {
-  selectedCategory = <any>[];
+  selectedCategory = [] as any;
+
   constructor(
     private http: HttpClient,
     private activatedRoute: ActivatedRoute
-  ) {}
+  ) {
+  }
 
   getByCategory(name) {
     this.http
@@ -22,8 +25,9 @@ export class SearchByCategoryComponent implements OnInit {
         console.log('category', result);
       });
   }
+
   ngOnInit(): void {
-    let name = this.activatedRoute.snapshot.params['name'];
+    const name = this.activatedRoute.snapshot.params.name;
     this.getByCategory(name);
   }
 }

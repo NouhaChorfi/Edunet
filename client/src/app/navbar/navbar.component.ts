@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { SearchComponent } from '../search/search.component';
+import {Component, OnInit} from '@angular/core';
+import {SearchComponent} from '../search/search.component';
+
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -7,10 +8,18 @@ import { SearchComponent } from '../search/search.component';
 })
 export class NavbarComponent implements OnInit {
   val = '';
-  handleSubmit() {}
+
+  constructor() {
+  }
+
+  handleSubmit() {
+  }
+
   handleInput(event) {
     this.val = event.target.value;
+    console.log(this.val)
   }
-  constructor() {}
-  ngOnInit(): void {}
+
+  ngOnInit(): void {
+  }
 }
