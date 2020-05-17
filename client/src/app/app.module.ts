@@ -29,6 +29,10 @@ import { CreateCourseComponent } from './create-course/create-course.component';
 import { StudentLogComponent } from './student-log/student-log.component';
 import { TeacherLogComponent } from './teacher-log/teacher-log.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { ChatComponent } from './chat/chat.component';
+
+import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
+const config: SocketIoConfig = { url: 'http://localhost:8080', options: {} };
 
 @NgModule({
   declarations: [
@@ -52,6 +56,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     StudentLogComponent,
     TeacherLogComponent,
     DashboardComponent,
+    ChatComponent,
   ],
 
   imports: [
@@ -61,6 +66,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     BrowserAnimationsModule,
     MDBBootstrapModule.forRoot(),
     HttpClientModule,
+    SocketIoModule.forRoot(config),
   ],
 
   providers: [],
