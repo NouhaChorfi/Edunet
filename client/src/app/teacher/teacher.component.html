@@ -17,7 +17,20 @@
         <h4 class="card-title">
           <strong>{{data ? data.teacher.first_name + ' ' +data.teacher.last_name: "na3rech"}}</strong>
         </h4>
+        <a class="icons-sm email-ic">
+          <mdb-icon fas icon="envelope"></mdb-icon>
+        </a>
         <h5>{{data ? data.teacher.email: "na3rech "}}</h5>
+        <br>
+        <a class="icons-sm li-ic">
+          <mdb-icon fab icon="linkedin-in"></mdb-icon>
+        </a>
+        <h5>{{data ? data.teacher.linkedIn: "na3rech "}}</h5>
+        <br>
+        <a class="icons-sm git-ic">
+          <mdb-icon fab icon="github"></mdb-icon>
+        </a>
+        <h5>{{data ? data.teacher.github: "na3rech "}}</h5>
 
       </mdb-card-body>
       <!--/.Card content-->
@@ -26,20 +39,18 @@
     <!--/.Card-->
   </div>
 
-  <div class='col-md-6'>
-
+  <div class='col-md-4'>
     <div class="list-group">
       <a href="#" class="list-group-item active waves-light" mdbWavesEffect>
         Delivered Courses
       </a>
       <div *ngFor="let course of data.course">
-        <a href="#" class="list-group-item list-group-item-action waves-light" mdbWavesEffect>{{course.title}}</a>
+        <a routerLink='/courses/{{course.id}}' class="list-group-item list-group-item-action waves-light"
+          mdbWavesEffect>{{course.title}}</a>
       </div>
     </div>
 
 
   </div>
+
 </div>
-
-
-

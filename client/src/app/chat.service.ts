@@ -1,23 +1,27 @@
 import { Injectable } from '@angular/core';
-import { Socket } from 'ngx-socket-io';
-import { ChatComponent } from './chat/chat.component';
-import { Observable } from 'rxjs';
+import * as io from 'socket.io-client';
+// @ts-ignore
+import { Observable } from 'rxjs/Observable';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ChatService {
-  constructor(private socket: Socket) {}
+  socket: io.Socket;
 
-  public sendMessage(message) {
-    this.socket.emit('new-message', message);
+  constructor() {
+    this.socket = io.connect('http://localhost:8080');
   }
 
-  public getMessages = () => {
-    return Observable.create((observer) => {
-      this.socket.on('new-message', (message) => {
-        observer.next(message);
+  listen(eventname: string): Observable<any> {
+    return new Observable((subscriber) => {
+      this.socket.on(eventname, (data) => {
+        subscriber.next(data);
       });
     });
-  };
+  }
+
+  emit(eventname: string, data: any) {
+    this.socket.emit(eventname, data);
+  }
 }

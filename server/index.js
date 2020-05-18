@@ -1,11 +1,13 @@
 require('dotenv').config();
-
 const express = require('express');
+const socket = require('socket.io');
+//const http = require('http');
+
 const cors = require('cors');
 const bodyParser = require('body-parser');
-
-const routes = require('./routes');
 const app = express();
+//Routes...
+const routes = require('./routes');
 
 // const http = require('http'); //
 // const server = http.Server(app);
@@ -34,13 +36,26 @@ app.use('/teachers', routes.teachers);
 app.use('/video', routes.videos)
 
 
-io.on('connection', (socket) => { //
-    console.log('user connected');
-});
-io.on('new-message', (message) => {
-    io.emit(message);
-}); //
+// io.on('new-message', (message) => {
+//     io.emit(message);
+//   });
+
 const port = process.env.PORT || 8080;
-http.listen(port, () => { // replaced app by http
+const server = app.listen(port, () => {
+
     console.log(`listening on port ${port}`);
+});
+// socket steUp 
+var io = socket(server);
+// Listen to new connection and show message in browser
+io.on('connection', (socket) => {
+    console.log(`New connection ${socket.id}`)
+    // Listening for chat event  
+    socket.on('chat', (data) => {
+        io.sockets.emit('chat', data)
+    })
+    socket.on('typing', (data) => {
+        io.sockets.emit('typing', data)
+    });
+
 });

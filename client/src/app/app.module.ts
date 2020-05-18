@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { FormsModule } from '@angular/forms';
+import { ChatService } from './chat.service';
+import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
 import { HttpClientModule } from '@angular/common/http';
 // Importing Material Design Library
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
@@ -31,7 +33,6 @@ import { TeacherLogComponent } from './teacher-log/teacher-log.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ChatComponent } from './chat/chat.component';
 
-import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
 const config: SocketIoConfig = { url: 'http://localhost:8080', options: {} };
 
 @NgModule({
@@ -63,13 +64,14 @@ const config: SocketIoConfig = { url: 'http://localhost:8080', options: {} };
     BrowserModule,
     AppRoutingModule,
     NgbModule,
+    FormsModule,
     BrowserAnimationsModule,
     MDBBootstrapModule.forRoot(),
     HttpClientModule,
     SocketIoModule.forRoot(config),
   ],
 
-  providers: [],
+  providers: [ChatService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

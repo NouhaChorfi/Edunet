@@ -1,4 +1,41 @@
-.row{
+.row {
   margin-left: 2%;
   margin-top: 2%;
+}
+
+#chatDiv {
+  float: right;
+  margin-left: 35%;
+}
+
+#output {
+  display: inline-block !important;
+  background-color: olive !important;
+}
+
+.icons-sm {
+  display: inline-block;
+  margin-right: 5%;
+  float: left;
+}
+
+h5 {
+  display: inline-block;
+  text-align: left;
+}
+
+#handler {
+  width: 20% !important;
+  margin: 2% !important;
+  float: left !important;
+  background-color: olive;
+}
+
+#message {
+  height: 50px;
+  background-color: red;
+}
+
+.p-2 {
+  width: 70% !important;
 }
